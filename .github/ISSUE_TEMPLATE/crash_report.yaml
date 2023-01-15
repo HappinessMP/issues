@@ -1,0 +1,44 @@
+name: Crash Report
+description: Report a crash in HappinessMP.
+labels: ['Class: crash']
+
+body:
+- type: textarea
+  id: description
+  attributes:
+    label: How did the crash occur?
+    description: Did you do anything specific to cause this crash?
+  validations:
+    required: true
+- type: checkboxes
+  id: multiple-occurs
+  attributes:
+    label: Has the same crash happened multiple times?
+    description: Please pay attention to the **exception address** to answer this question.
+    options:
+      - label: "Yes"
+      - label: "No"
+  validations:
+    required: true
+- type: textarea
+  id: files
+  attributes:
+    label: Attach required files
+    description: "The following files are needed to proceed the crash:\n
+      - A screenshot of the exception window.\n
+      - The latest crash dump file in the crashes folder of the HappinessMP root.\n
+      - The core.log file in the logs folder of the HappinessMP root.\n\n
+      You can either attach the files to this text box or upload them to a separate host and paste the links here."
+  validations:
+    required: true
+- type: input
+  id: os
+  attributes:
+    label: Operating system
+    description: Which operating system are you using?
+  validations:
+    required: true
+- type: markdown
+  attributes:
+    value: |
+      **Please note: The crash can only be fixed when the report has been filled out completely.**

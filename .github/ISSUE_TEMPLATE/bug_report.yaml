@@ -1,0 +1,33 @@
+name: Bug Report
+description: Report a bug in HappinessMP.
+labels: ['Class: bug']
+
+body:
+- type: textarea
+  id: description
+  attributes:
+    label: Description of the problem
+    description: Describe the exact problem.
+  validations:
+    required: true
+- type: textarea
+  id: reproduction
+  attributes:
+    label: Reproduction steps
+    description: Describe how to reproduce the problem.
+  validations:
+    required: true
+- type: textarea
+  id: files
+  attributes:
+    label: Additional files
+    description: Add files that you think might be helpful (this can also be a screenshot).
+  validations:
+    required: false
+- type: input
+  id: os
+  attributes:
+    label: Operating system
+    description: Which operating system are you using?
+  validations:
+    required: true

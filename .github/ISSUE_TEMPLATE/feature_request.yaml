@@ -1,0 +1,12 @@
+name: Feature Request
+description: Suggest an idea for HappinessMP.
+labels: ['Class: feature']
+
+body:
+- type: textarea
+  id: description
+  attributes:
+    label: What do you suggest?
+    description: Please describe your suggestion clearly and maybe even justify it.
+  validations:
+    required: true
